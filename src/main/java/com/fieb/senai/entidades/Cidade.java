@@ -5,15 +5,30 @@
  */
 package com.fieb.senai.entidades;
 
+import java.util.HashSet;
 import java.util.Objects;
+import java.util.Set;
 
 /**
  * Classe para identificar a cidade
- * @author Natã Assis 
+ *
+ * @author Natã Assis
  */
 public class Cidade {
+
     private Integer id;
     private String nome;
+
+    private Estado estado;
+
+    public Estado getEstado() {
+        return estado;
+    }
+
+    public void setEstado(Estado estado) {
+        this.estado = estado;
+    }
+    
 
     public Cidade(Integer id, String nome) {
         this.id = id;
@@ -64,5 +79,5 @@ public class Cidade {
         }
         return true;
     }
-    
+
 }

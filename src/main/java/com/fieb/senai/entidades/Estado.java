@@ -5,42 +5,34 @@
  */
 package com.fieb.senai.entidades;
 
-import com.fieb.senai.app.enums.Sexo;
-import java.util.ArrayList;
 import java.util.HashSet;
-import java.util.List;
 import java.util.Objects;
 import java.util.Set;
 
 /**
- * classe para identificar o cliente
+ * Classe para identifcar o estado do cliente
  *
  * @author Natã Assis
  */
-public class Cliente {
+public class Estado {
 
+    //Atributos de cliente
     private Integer id;
     private String nome;
-    private Integer idade;
-    private Sexo sexo;
 
-    private Endereco endereco;
+    private Cidade cidade;
 
-    public Endereco getEndereco() {
-        return endereco;
+    public Cidade getCidade() {
+        return cidade;
     }
 
-    public void setEndereco(Endereco endereco) {
-        this.endereco = endereco;
+    public void setCidade(Cidade cidade) {
+        this.cidade = cidade;
     }
-    
 
-    private Set<String> telefones = new HashSet<>();
-
-    public Cliente(Integer id, String nome, Integer idade) {
+    public Estado(Integer id, String nome) {
         this.id = id;
         this.nome = nome;
-        this.idade = idade;
     }
 
     public Integer getId() {
@@ -59,20 +51,11 @@ public class Cliente {
         this.nome = nome;
     }
 
-    public Integer getIdade() {
-        return idade;
-    }
-
-    public void setIdade(Integer idade) {
-        this.idade = idade;
-    }
-
     @Override
     public int hashCode() {
-        int hash = 5;
-        hash = 89 * hash + Objects.hashCode(this.id);
-        hash = 89 * hash + Objects.hashCode(this.nome);
-        hash = 89 * hash + Objects.hashCode(this.idade);
+        int hash = 7;
+        hash = 37 * hash + Objects.hashCode(this.id);
+        hash = 37 * hash + Objects.hashCode(this.nome);
         return hash;
     }
 
@@ -87,14 +70,11 @@ public class Cliente {
         if (getClass() != obj.getClass()) {
             return false;
         }
-        final Cliente other = (Cliente) obj;
+        final Estado other = (Estado) obj;
         if (!Objects.equals(this.nome, other.nome)) {
             return false;
         }
         if (!Objects.equals(this.id, other.id)) {
-            return false;
-        }
-        if (!Objects.equals(this.idade, other.idade)) {
             return false;
         }
         return true;
