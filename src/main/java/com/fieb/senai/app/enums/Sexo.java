@@ -9,6 +9,9 @@ package com.fieb.senai.app.enums;
  *
  * @author srass
  */
-public class Sexo {
+public enum Sexo {
+    MASCULINO,
+    FEMININo;
     
+            
 }

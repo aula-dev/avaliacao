@@ -5,18 +5,21 @@
  */
 package com.fieb.senai.entidades;
 
+import com.fieb.senai.app.enums.Sexo;
 import java.util.Objects;
 
 /**
- *
- * @author srass
+ * classe para identificar o cliente 
+ * @author Natã Assis
  */
 public class Cliente {
-
+    
     private Integer id;
     private String nome;
     private Integer idade;
-
+    private Sexo sexo;
+    
+    
     public Cliente(Integer id, String nome, Integer idade) {
         this.id = id;
         this.nome = nome;
