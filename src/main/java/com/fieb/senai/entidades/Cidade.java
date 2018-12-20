@@ -5,29 +5,19 @@
  */
 package com.fieb.senai.entidades;
 
-import com.fieb.senai.app.enums.Sexo;
-import java.util.HashSet;
 import java.util.Objects;
-import java.util.Set;
 
 /**
- * classe para identificar o cliente 
- * @author Natã Assis
+ * Classe para identificar a cidade
+ * @author Natã Assis 
  */
-public class Cliente {
-    
+public class Cidade {
     private Integer id;
     private String nome;
-    private Integer idade;
-    private Sexo sexo;
-    
-    private Endereco endereco;
-        private Set<String> telefone = new HashSet<>();
-    
-    public Cliente(Integer id, String nome, Integer idade) {
+
+    public Cidade(Integer id, String nome) {
         this.id = id;
         this.nome = nome;
-        this.idade = idade;
     }
 
     public Integer getId() {
@@ -46,20 +36,11 @@ public class Cliente {
         this.nome = nome;
     }
 
-    public Integer getIdade() {
-        return idade;
-    }
-
-    public void setIdade(Integer idade) {
-        this.idade = idade;
-    }
-
     @Override
     public int hashCode() {
         int hash = 5;
-        hash = 89 * hash + Objects.hashCode(this.id);
-        hash = 89 * hash + Objects.hashCode(this.nome);
-        hash = 89 * hash + Objects.hashCode(this.idade);
+        hash = 29 * hash + Objects.hashCode(this.id);
+        hash = 29 * hash + Objects.hashCode(this.nome);
         return hash;
     }
 
@@ -74,17 +55,14 @@ public class Cliente {
         if (getClass() != obj.getClass()) {
             return false;
         }
-        final Cliente other = (Cliente) obj;
+        final Cidade other = (Cidade) obj;
         if (!Objects.equals(this.nome, other.nome)) {
             return false;
         }
         if (!Objects.equals(this.id, other.id)) {
             return false;
         }
-        if (!Objects.equals(this.idade, other.idade)) {
-            return false;
-        }
         return true;
     }
-     
+    
 }
