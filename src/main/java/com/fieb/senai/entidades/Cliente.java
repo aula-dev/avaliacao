@@ -34,7 +34,7 @@ public class Cliente {
         this.endereco = endereco;
     }
     
-
+    // Faltaram os métodos Get e Set para este atributo.
     private Set<String> telefones = new HashSet<>();
 
     public Cliente(Integer id, String nome, Integer idade) {
