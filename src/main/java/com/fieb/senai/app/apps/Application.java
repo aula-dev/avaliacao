@@ -10,5 +10,8 @@ package com.fieb.senai.app.apps;
  * @author srass
  */
 public class Application {
-         
+      public static void main(String[] args) {
+          
+    }
+   
 }
