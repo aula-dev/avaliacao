@@ -20,7 +20,7 @@ public class Estado {
     private Integer id;
     private String nome;
 
-    private Cidade cidade;
+    private Cidade cidade; // Segundo o diagrama de classes este atributo será uma coleção.
 
     public Cidade getCidade() {
         return cidade;
